@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#6d5ce8">
+<title>Deutsch-Entdecker – spielerisch Deutsch lernen</title>
+<style>
+:root{font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:#27243e;background:#f7f7ff}*{box-sizing:border-box}body{margin:0;background:linear-gradient(140deg,#f9f6ff,#f0faf8);min-height:100vh}button,select,input,textarea{font:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #ffb74d;outline-offset:3px}.shell{max-width:1100px;margin:auto;padding:24px 18px 50px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px}.brandicon{background:#ffdd80;border-radius:18px;font-size:30px;padding:11px}.brand h1{font-size:clamp(1.4rem,4vw,2rem);margin:0}.muted{color:#65647b}.brand p{margin:2px 0;font-size:.9rem}.select{border:1px solid #e5e2f1;border-radius:14px;padding:12px;background:white;font-weight:700}.hero{background:#6858d9;color:white;border-radius:24px;padding:25px 28px;display:flex;justify-content:space-between;gap:16px;align-items:center;box-shadow:0 12px 25px #5c4cc326}.hero h2{font-size:clamp(1.5rem,4vw,2rem);margin:0 0 6px}.hero p{margin:0;max-width:600px}.hero .art{font-size:4.5rem}.stats{display:flex;gap:12px;flex-wrap:wrap;margin:17px 0 25px}.stat{background:white;border:1px solid #eceaf4;border-radius:15px;padding:11px 17px;min-width:125px}.stat b{display:block;font-size:1.4rem}.stat small{color:#6b687b}.heading{margin:0 0 12px;font-size:1.25rem}.categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:11px}.category{border:2px solid transparent;background:white;border-radius:18px;text-align:start;padding:15px;box-shadow:0 4px 18px #28204c0d}.category:hover,.category.active{border-color:#7162e6;background:#f5f2ff}.category .emoji{display:block;font-size:2rem}.category strong{display:block;margin-top:6px}.category small{color:#767386}.panels{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:20px}.panel{background:white;border:1px solid #ebe9f3;border-radius:22px;padding:20px;box-shadow:0 8px 25px #28204c0d}.panel h3{margin:0}.panel .hint{color:#777389;font-size:.9rem;margin:3px 0 16px}.flash{border-radius:20px;background:linear-gradient(135deg,#fff5d6,#ffe8f1);text-align:center;padding:23px 14px;min-height:255px;display:flex;align-items:center;justify-content:center;flex-direction:column}.flash .picture{font-size:5rem;line-height:1.1}.flash .word{font-size:2rem;font-weight:850;margin-top:12px}.flash .meaning{color:#665e75;font-size:1.2rem}.flash .sentence{margin-top:10px;font-size:.95rem}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.btn{border:0;border-radius:13px;padding:12px 16px;font-weight:750}.primary{background:#6858d9;color:white}.secondary{background:#efecff;color:#4738af}.success{background:#e1f7ec;color:#116747}.quizprompt{font-size:1.3rem;font-weight:800;background:#f8f7fd;border-radius:14px;padding:17px;text-align:center}.options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:15px 0}.option{background:#f8f8fc;border:2px solid #eeedf5;border-radius:13px;padding:12px;text-align:start;font-weight:700;min-height:65px}.option:hover:not(:disabled){border-color:#6858d9}.option.correct{background:#e1f7ec;border-color:#47b982}.option.wrong{background:#ffebeb;border-color:#db7777}.option:disabled{cursor:default}.feedback{min-height:30px;font-weight:700}.progress{background:#eceaf5;height:9px;border-radius:9px;margin:10px 0 17px;overflow:hidden}.progress div{background:#6858d9;height:100%;width:0;transition:width .2s} .voice-settings{margin-top:14px;padding:15px;border:1px solid #e6e2f2;border-radius:15px;background:#faf9ff}.voice-settings .voice-grid{display:flex;gap:12px;flex-wrap:wrap;align-items:end}.voice-settings label{display:flex;flex-direction:column;gap:5px;font-size:.88rem;font-weight:700}.voice-settings select{max-width:100%;border:1px solid #dcd8eb;border-radius:10px;padding:9px;background:white}.voice-settings p{font-size:.8rem;color:#66627b;margin:10px 0 0}.editor-toggle{margin-top:23px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}.editor{margin-top:16px;background:#fff;border:1px solid #e9e5f3;border-radius:22px;padding:22px;box-shadow:0 8px 25px #28204c0d}.editor[hidden]{display:none}.editor h2{margin:0 0 8px;font-size:1.35rem}.editor p{color:#66627b;margin:5px 0 16px}.editor-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:flex;flex-direction:column;gap:5px;font-weight:650;font-size:.9rem}.field input,.field textarea,.field select{width:100%;background:#fafaff;border:1px solid #dcd8eb;border-radius:11px;padding:11px;color:#28243f}.field textarea{resize:vertical;min-height:65px}.field.wide{grid-column:1/-1}.upload-preview{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:8px}.upload-preview img{width:80px;height:80px;object-fit:contain;border-radius:12px;background:#f5f2ff}.manage-list{display:grid;gap:8px;margin-top:12px}.manage-item{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#f8f7fc;padding:10px 12px;border-radius:12px}.manage-item img{width:42px;height:42px;object-fit:contain}.editor-message{min-height:26px;font-weight:700;color:#216b50}.help{font-size:.82rem;color:#6c687c}.flash .picture img,.quizprompt img{width:140px;height:140px;object-fit:contain;border-radius:15px}.quizprompt img{width:95px;height:95px}.editor-tools{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.divider{border:0;border-top:1px solid #eeeaf5;margin:22px 0}.secondary-danger{background:#ffebeb;color:#8d2631}@media(max-width:650px){.editor-grid{grid-template-columns:1fr}} footer{text-align:center;color:#777389;margin-top:28px;font-size:.9rem}.word,.sentence,.quizprompt{direction:ltr;unicode-bidi:isolate}@media(max-width:730px){.panels{grid-template-columns:1fr}.hero .art{font-size:3rem}.panel{padding:16px}}@media(max-width:420px){.hero{padding:20px}.hero .art{display:none}.options{grid-template-columns:1fr}}
+</style>
+</head>
+<body><div class="shell">
+<header class="top"><div class="brand"><div class="brandicon">🧭</div><div><h1>Deutsch-Entdecker</h1><p id="tagline" class="muted"></p></div></div><label>🌍 <select class="select" id="language" aria-label="Unterstützungssprache"><option value="de">🇩🇪 Deutsch</option><option value="tr">Türkçe</option><option value="uk">Українська</option><option value="ar">العربية</option></select></label></header>
+<section class="hero"><div><h2 id="welcome"></h2><p id="intro"></p></div><div class="art" aria-hidden="true">📚✨</div></section>
+<div class="stats"><div class="stat"><b id="stars">0 ⭐</b><small id="starsLabel"></small></div><div class="stat"><b id="correct">0</b><small id="correctLabel"></small></div><div class="stat"><b id="level">1</b><small id="levelLabel"></small></div></div>
+<h2 class="heading" id="topicsTitle"></h2><div class="categories" id="categories"></div>
+<div class="panels"><section class="panel"><h3 id="learnTitle"></h3><p class="hint" id="learnHint"></p><div class="flash"><div class="picture" id="picture"></div><div class="word" id="word" lang="de"></div><div class="meaning" id="meaning"></div><div class="sentence" id="sentence" lang="de"></div></div><div class="actions"><button class="btn primary" id="listen"></button><button class="btn secondary" id="listenSentence"></button><button class="btn secondary" id="next"></button></div><div class="voice-settings"><div class="voice-grid"><label for="voiceSelect">🎙️ Deutsche Stimme<select id="voiceSelect" aria-label="Deutsche Stimme wählen"><option value="">Automatisch auswählen</option></select></label><label for="paceSelect">🐢 Sprechtempo<select id="paceSelect"><option value="calm">Ruhig und natürlich</option><option value="slow">Besonders langsam</option><option value="normal">Normales Tempo</option></select></label><button type="button" class="btn secondary" id="voicePreview">▶ Stimme testen</button></div><p id="voiceNote">Tipp: Wähle eine natürlich klingende Stimme deines Geräts. Die Qualität hängt vom Browser und den installierten Stimmen ab.</p></div></section>
+<section class="panel"><h3 id="quizTitle"></h3><p class="hint" id="quizHint"></p><div class="progress"><div id="progress"></div></div><div class="quizprompt" id="quizprompt" lang="de"></div><div class="options" id="options"></div><div class="feedback" id="feedback" role="status" aria-live="polite"></div><button class="btn success" id="newQuestion"></button></section></div>
+<div class="editor-toggle"><button class="btn secondary" id="toggleEditor" aria-expanded="false" aria-controls="editor">✏️ Eigene Wörter & Bilder verwalten</button><span class="help">Für Lehrkräfte · Wörter werden online für alle Geräte gespeichert.</span></div>
+<section class="editor" id="teacherAccess" hidden>
+<h2>🔐 Lehrkraftbereich</h2><p id="accessHint">Bitte PIN eingeben.</p>
+<div class="editor-tools" id="setupFields" hidden><label class="field">Einrichtungsschlüssel aus Netlify<input id="setupKey" type="password" autocomplete="off"></label></div>
+<div class="editor-tools"><label class="field">Dein PIN (mindestens 6 Ziffern)<input id="teacherPin" type="password" inputmode="numeric" pattern="[0-9]{6,12}" minlength="6" maxlength="12" autocomplete="off"></label><button type="button" class="btn primary" id="accessButton">Freischalten</button></div><p id="accessMessage" role="status"></p>
+</section>
+<section class="editor" id="editor" hidden>
+ <h2>✏️ Mein Wörter-Atelier</h2><button class="btn secondary" id="logoutTeacher" type="button">🔒 Lehrkraftbereich schließen</button><p>Ergänze eigene Wörter, Bilder und Übersetzungen. Sie erscheinen anschließend direkt in den Lernkarten und Quizfragen.</p>
+ <form id="wordForm"><div class="editor-grid">
+ <label class="field">Thema<select id="editTopic" required></select></label>
+ <label class="field">Deutsches Wort *<input id="editGerman" maxlength="90" placeholder="z. B. die Blume" required></label>
+ <label class="field">Türkisch<input id="editTr" maxlength="120" placeholder="çiçek"></label>
+ <label class="field">Ukrainisch<input id="editUk" maxlength="120" placeholder="квітка"></label>
+ <label class="field">Arabisch<input id="editAr" maxlength="120" placeholder="زهرة" dir="rtl"></label>
+ <div class="field wide"><div class="editor-tools"><button class="btn secondary" id="autoTranslate" type="button">🌍 Übersetzungen automatisch einfügen</button><label class="help"><input type="checkbox" id="autoTranslateEnabled" checked> Beim Hinzufügen automatisch übersetzen</label></div><span class="help">Vorschläge werden über einen externen Übersetzungsdienst geladen. Bitte prüfen und bei Bedarf korrigieren. Eine Internetverbindung ist nötig.</span></div>
+ <label class="field">Emoji (optional)<input id="editEmoji" maxlength="12" placeholder="🌸"></label>
+ <label class="field wide">Einfacher deutscher Beispielsatz<input id="editSentence" maxlength="220" placeholder="Die Blume ist schön."></label>
+ <label class="field wide">Eigenes Bild hochladen (JPG, PNG oder WebP, maximal 1,5 MB)<input id="editImage" type="file" accept="image/png,image/jpeg,image/webp"></label>
+ </div><div class="upload-preview" id="imagePreview"></div><div class="editor-tools"><button class="btn primary" type="submit">➕ Wort hinzufügen</button><button class="btn secondary" type="reset">Eingaben leeren</button></div></form>
+ <div class="editor-message" id="editorMessage" role="status" aria-live="polite"></div>
+ <hr class="divider"><h3>Meine eigenen Wörter</h3><div class="manage-list" id="customList"></div>
+ <hr class="divider"><h3>Wörter sichern oder übertragen</h3><p class="help">Exportiere deine Wörter als JSON-Datei. So kannst du sie auf einem anderen Gerät wieder importieren. Die Online-Wörter sind für alle Geräte sichtbar. Export ist eine zusätzliche Sicherung.</p>
+ <div class="editor-tools"><button class="btn secondary" id="exportWords" type="button">⬇️ Wörter exportieren</button><label class="btn secondary" style="cursor:pointer">⬆️ Wörter importieren<input id="importWords" type="file" accept=".json,application/json" style="display:none"></label></div>
+</section><footer id="footer"></footer></div>
+<script>
+'use strict';
+const lessons={
+ greetings:[['👋','Hallo','Merhaba','Привіт','مرحبًا','Hallo! Wie geht es dir?'],['😊','Danke','Teşekkürler','Дякую','شكرًا','Danke für deine Hilfe.'],['🙏','Bitte','Lütfen','Будь ласка','من فضلك','Ein Wasser, bitte.'],['👋','Tschüss','Hoşça kal','Бувай','إلى اللقاء','Tschüss! Bis morgen!']],
+ colors:[['🔴','rot','kırmızı','червоний','أحمر','Der Ball ist rot.'],['🔵','blau','mavi','синій','أزرق','Der Himmel ist blau.'],['🟡','gelb','sarı','жовтий','أصفر','Die Sonne ist gelb.'],['🟢','grün','yeşil','зелений','أخضر','Das Blatt ist grün.']],
+ numbers:[['1️⃣','eins','bir','один','واحد','Ich habe einen Ball.'],['2️⃣','zwei','iki','два','اثنان','Ich sehe zwei Katzen.'],['3️⃣','drei','üç','три','ثلاثة','Drei Kinder spielen.'],['4️⃣','vier','dört','чотири','أربعة','Vier Bücher liegen hier.']],
+ food:[['🍎','der Apfel','elma','яблуко','تفاحة','Ich esse einen Apfel.'],['🍞','das Brot','ekmek','хліб','خبز','Das Brot ist frisch.'],['🥛','die Milch','süt','молоко','حليب','Ich trinke Milch.'],['🍌','die Banane','muz','банан','موزة','Die Banane ist gelb.']],
+ animals:[['🐱','die Katze','kedi','кішка','قطة','Die Katze ist klein.'],['🐶','der Hund','köpek','собака','كلب','Der Hund spielt.'],['🐦','der Vogel','kuş','птах','طائر','Der Vogel singt.'],['🐰','der Hase','tavşan','заєць','أرنب','Der Hase springt.']],
+ school:[['✏️','der Stift','kalem','ручка','قلم','Ich schreibe mit dem Stift.'],['📚','das Buch','kitap','книга','كتاب','Das Buch ist interessant.'],['🎒','die Schultasche','okul çantası','шкільний рюкзак','حقيبة مدرسية','Meine Schultasche ist blau.'],['🪑','der Stuhl','sandalye','стілець','كرسي','Der Stuhl ist hier.']],
+ family:[['👩','die Mutter','anne','мама','أم','Meine Mutter lächelt.'],['👨','der Vater','baba','тато','أب','Mein Vater liest.'],['👧','die Schwester','kız kardeş','сестра','أخت','Meine Schwester spielt.'],['👦','der Bruder','erkek kardeş','брат','أخ','Mein Bruder lacht.']]
+};
+const categories=[['greetings','👋','Begrüßungen','Selamlaşma','Привітання','التحيات'],['colors','🎨','Farben','Renkler','Кольори','الألوان'],['numbers','🔢','Zahlen','Sayılar','Числа','الأرقام'],['food','🍎','Essen & Trinken','Yiyecek ve içecek','Їжа та напої','الطعام والشراب'],['animals','🐾','Tiere','Hayvanlar','Тварини','الحيوانات'],['school','🎒','Schule','Okul','Школа','المدرسة'],['family','🏡','Familie','Aile','Сім’я','العائلة']];
+const translations={
+ de:{tagline:'Deutsch spielerisch lernen!',welcome:'Hallo, Sprach-Entdecker! 👋',intro:'Wähle ein Thema. Schau dir Bilder an, höre deutsche Wörter und spiele kleine Lernspiele.',stars:'Gesammelte Sterne',correct:'Richtige Antworten',level:'Lernlevel',topics:'Was möchtest du heute lernen?',learn:'Neue Wörter lernen',learnHint:'Schau dir das Bild an, höre das Wort und sprich es nach.',listen:'🔊 Wort anhören',listenSentence:'🗣️ Satz anhören',next:'➡️ Nächstes Wort',quiz:'Kleines Wortspiel',quizHint:'Wähle das passende deutsche Wort.',newQuestion:'🔄 Neue Frage',right:'Super! Richtig beantwortet! ⭐',wrong:'Versuche es noch einmal! 💪',footer:'Jedes neue Wort ist ein kleiner Erfolg. 💜',words:'Wörter'},
+ tr:{tagline:'Eğlenerek Almanca öğren!',welcome:'Merhaba, dil kaşifi! 👋',intro:'Bir konu seç. Resimlere bak, Almanca kelimeleri dinle ve küçük oyunlar oyna.',stars:'Toplanan yıldızlar',correct:'Doğru cevaplar',level:'Seviye',topics:'Bugün ne öğrenmek istersin?',learn:'Yeni kelimeler öğren',learnHint:'Resme bak, kelimeyi dinle ve tekrar et.',listen:'🔊 Kelimeyi dinle',listenSentence:'🗣️ Cümleyi dinle',next:'➡️ Sonraki kelime',quiz:'Küçük kelime oyunu',quizHint:'Doğru Almanca kelimeyi seç.',newQuestion:'🔄 Yeni soru',right:'Harika! Doğru cevap! ⭐',wrong:'Tekrar dene! 💪',footer:'Her yeni kelime bir başarıdır. 💜',words:'kelime'},
+ uk:{tagline:'Вивчай німецьку граючись!',welcome:'Привіт, досліднику мови! 👋',intro:'Обери тему. Розглядай малюнки, слухай німецькі слова та грай у маленькі ігри.',stars:'Зібрані зірочки',correct:'Правильні відповіді',level:'Рівень',topics:'Що хочеш вивчити сьогодні?',learn:'Вивчай нові слова',learnHint:'Подивись на малюнок, послухай і повтори слово.',listen:'🔊 Послухати слово',listenSentence:'🗣️ Послухати речення',next:'➡️ Наступне слово',quiz:'Маленька гра зі словами',quizHint:'Обери правильне німецьке слово.',newQuestion:'🔄 Нове запитання',right:'Чудово! Правильна відповідь! ⭐',wrong:'Спробуй ще раз! 💪',footer:'Кожне нове слово — маленька перемога. 💜',words:'слів'},
+ ar:{tagline:'تعلّم الألمانية باللعب!',welcome:'مرحبًا يا مستكشف اللغة! 👋',intro:'اختر موضوعًا. شاهد الصور واستمع إلى الكلمات الألمانية والعب ألعابًا صغيرة.',stars:'النجوم',correct:'الإجابات الصحيحة',level:'المستوى',topics:'ماذا تريد أن تتعلّم اليوم؟',learn:'تعلّم كلمات جديدة',learnHint:'انظر إلى الصورة واستمع إلى الكلمة وكررها.',listen:'🔊 استمع إلى الكلمة',listenSentence:'🗣️ استمع إلى الجملة',next:'➡️ الكلمة التالية',quiz:'لعبة كلمات صغيرة',quizHint:'اختر الكلمة الألمانية الصحيحة.',newQuestion:'🔄 سؤال جديد',right:'رائع! إجابة صحيحة! ⭐',wrong:'حاول مرة أخرى! 💪',footer:'كل كلمة جديدة هي نجاح صغير. 💜',words:'كلمات'}
+};
+const $=id=>document.getElementById(id);
+const baseLengths=Object.fromEntries(Object.entries(lessons).map(([key,entries])=>[key,entries.length]));
+const CUSTOM_KEY='deutsch-entdecker-custom-v1';
+let customWords=[];let teacherUnlocked=false;let setupRequired=false;
+function isValidCustom(w){return w&&typeof w==='object'&&Object.hasOwn(lessons,w.topic)&&typeof w.german==='string'&&w.german.trim().length>0&&w.german.length<=90&&(!w.image||typeof w.image==='string'&&/^data:image\/(png|jpeg|webp);base64,/.test(w.image)&&w.image.length<2200000)}
+function asEntry(w){return [w.emoji||'🖼️',w.german,w.tr||'',w.uk||'',w.ar||'',w.sentence||'',w.image||'']}
+function refreshLessons(){for(const key of Object.keys(lessons))lessons[key].splice(baseLengths[key]);customWords.forEach(w=>lessons[w.topic].push(asEntry(w)))}
+refreshLessons();
+async function api(action,method='GET',body){
+ const res=await fetch('/.netlify/functions/classroom?action='+encodeURIComponent(action),{method,credentials:'same-origin',headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined,cache:'no-store'});
+ const data=await res.json().catch(()=>({}));if(!res.ok)throw Error(data.error||'Server nicht erreichbar ('+res.status+').');return data;
+}
+async function loadSharedWords(){try{const data=await api('words');customWords=(data.words||[]).filter(isValidCustom);refreshAfterEdit();$('syncStatus').textContent='☁️ Online-Wörter geladen: '+customWords.length;}catch(e){$('syncStatus').textContent='⚠️ Online-Wörter nicht erreichbar: '+e.message}}
+async function storeCustom(){throw Error('Bitte Wörter über die Online-Funktion speichern.')}
+let lang='de',topic='greetings',wordIndex=0,quizTarget=null,quizSolved=false;
+const saved=(()=>{try{return JSON.parse(localStorage.getItem('deutsch-entdecker-progress')||'{}')}catch{return {}}})();let stars=Number(saved.stars)||0,correct=Number(saved.correct)||0;
+function save(){try{localStorage.setItem('deutsch-entdecker-progress',JSON.stringify({stars,correct}))}catch{}}
+function stats(){$('stars').textContent=stars+' ⭐';$('correct').textContent=correct;$('level').textContent=1+Math.floor(correct/5)}
+function word(){const w=lessons[topic][wordIndex%lessons[topic].length];renderPicture($('picture'),w);$('word').textContent=w[1];$('meaning').textContent=lang==='de'?w[1]:w[lang==='tr'?2:lang==='uk'?3:4];$('sentence').textContent=w[5]}
+function renderPicture(element,w){element.replaceChildren();if(w[6]){const img=document.createElement('img');img.src=w[6];img.alt=w[1];element.append(img)}else element.textContent=w[0]}
+function showCategories(){$('categories').replaceChildren();categories.forEach(c=>{const b=document.createElement('button');b.type='button';b.className='category'+(topic===c[0]?' active':'');b.setAttribute('aria-pressed',String(topic===c[0]));const e=document.createElement('span');e.className='emoji';e.textContent=c[1];const title=document.createElement('strong');title.textContent=c[lang==='de'?2:lang==='tr'?3:lang==='uk'?4:5];const small=document.createElement('small');small.textContent=lessons[c[0]].length+' '+translations[lang].words;b.append(e,title,small);b.onclick=()=>{topic=c[0];wordIndex=0;showCategories();word();newQuestion();if($('editTopic'))$('editTopic').value=topic};$('categories').append(b)})}
+function newQuestion(){const pool=lessons[topic];quizTarget=pool[Math.floor(Math.random()*pool.length)];quizSolved=false;renderPicture($('quizprompt'),quizTarget);$('feedback').textContent='';$('options').replaceChildren();const choices=[...pool].sort(()=>Math.random()-.5).slice(0,Math.min(4,pool.length));if(!choices.includes(quizTarget))choices[0]=quizTarget;choices.sort(()=>Math.random()-.5);choices.forEach(w=>{const b=document.createElement('button');b.type='button';b.className='option';b.textContent=w[1];b.lang='de';b.onclick=()=>{if(quizSolved)return;if(w===quizTarget){quizSolved=true;b.classList.add('correct');$('feedback').textContent=translations[lang].right;stars++;correct++;stats();save();$('progress').style.width=(correct%5)*20+'%';$('options').querySelectorAll('button').forEach(x=>x.disabled=true)}else{b.classList.add('wrong');$('feedback').textContent=translations[lang].wrong}};$('options').append(b)})}
+function applyLanguage(){const t=translations[lang];document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';['tagline','welcome','intro','starsLabel','correctLabel','levelLabel','topicsTitle','learnTitle','learnHint','quizTitle','quizHint','footer'].forEach(id=>{const key={starsLabel:'stars',correctLabel:'correct',levelLabel:'level'}[id]||id;$(id).textContent=t[key]});$('listen').textContent=t.listen;$('listenSentence').textContent=t.listenSentence;$('next').textContent=t.next;$('newQuestion').textContent=t.newQuestion;showCategories();word();newQuestion();stats()}
+$('language').addEventListener('change',e=>{lang=e.target.value;applyLanguage()});$('next').onclick=()=>{wordIndex++;word()};$('newQuestion').onclick=newQuestion;
+// Friendly German speech, with explicit voice and speed controls.
+// Browser speech synthesis depends on the OS and available voices; no cloud credentials are required.
+const VOICE_PREF_KEY='deutsch-entdecker-voice-settings-v2';
+let germanVoices=[];
+let voicePrefs={voiceURI:'',pace:'calm'};
+try{voicePrefs={...voicePrefs,...JSON.parse(localStorage.getItem(VOICE_PREF_KEY)||'{}')}}catch{}
+if(!['calm','slow','normal'].includes(voicePrefs.pace))voicePrefs.pace='calm';
+$('paceSelect').value=voicePrefs.pace;
+function saveVoicePrefs(){try{localStorage.setItem(VOICE_PREF_KEY,JSON.stringify(voicePrefs))}catch{}}
+function voiceScore(v){
+ const name=v.name.toLowerCase();
+ return (/natural|neural|premium|enhanced|online/i.test(name)?35:0)+
+ (/google|microsoft|apple|siri/i.test(name)?8:0)+
+ (/de-de/i.test(v.lang)?8:0)+
+ (/anna|katja|petra|vicki|helena|sophie|conrad|florian/i.test(name)?3:0);
+}
+function refreshVoices(){
+ if(!('speechSynthesis' in window))return;
+ germanVoices=speechSynthesis.getVoices().filter(v=>/^de([_-]|$)/i.test(v.lang)).sort((a,b)=>voiceScore(b)-voiceScore(a));
+ const select=$('voiceSelect'), previous=voicePrefs.voiceURI;
+ select.replaceChildren();
+ const automatic=document.createElement('option');automatic.value='';automatic.textContent='Automatisch (empfohlen)';select.append(automatic);
+ germanVoices.forEach(v=>{const opt=document.createElement('option');opt.value=v.voiceURI;opt.textContent=v.name+' · '+v.lang;select.append(opt)});
+ select.value=germanVoices.some(v=>v.voiceURI===previous)?previous:'';
+ if(!germanVoices.length){$('voiceNote').textContent='Auf diesem Gerät ist derzeit keine deutsche Stimme verfügbar. Prüfe die Sprach- und Bedienungshilfen-Einstellungen deines Geräts.'}
+}
+if('speechSynthesis' in window){refreshVoices();speechSynthesis.addEventListener?.('voiceschanged',refreshVoices)}
+$('voiceSelect').addEventListener('change',()=>{voicePrefs.voiceURI=$('voiceSelect').value;saveVoicePrefs()});
+$('paceSelect').addEventListener('change',()=>{voicePrefs.pace=$('paceSelect').value;saveVoicePrefs()});
+function speakGerman(text){
+ if(!('speechSynthesis' in window)){alert('Die Sprachausgabe ist in diesem Browser leider nicht verfügbar.');return}
+ if(!text||!text.trim())return;
+ refreshVoices();speechSynthesis.cancel();
+ const speech=new SpeechSynthesisUtterance(text.trim());speech.lang='de-DE';
+ // Avoid unnatural pitch manipulation; moderate slowing sounds more human than extreme slowing.
+ speech.rate={calm:0.88,slow:0.76,normal:1}[voicePrefs.pace]||0.88;
+ speech.pitch=1;speech.volume=1;
+ const selected=germanVoices.find(v=>v.voiceURI===voicePrefs.voiceURI)||germanVoices[0];
+ if(selected)speech.voice=selected;
+ speechSynthesis.speak(speech);
+}
+$('voicePreview').onclick=()=>speakGerman('Hallo! Schön, dass du da bist. Wir lernen heute gemeinsam Deutsch.');
+$('listen').onclick=()=>speakGerman(lessons[topic][wordIndex%lessons[topic].length][1]);
+$('listenSentence').onclick=()=>speakGerman(lessons[topic][wordIndex%lessons[topic].length][5]);
+$('progress').style.width=(correct%5)*20+'%';applyLanguage();
+// Teacher / parent editor: images and words are stored locally in this browser.
+const editor=$('editor');
+const access=$('teacherAccess');
+const syncStatus=document.createElement('span');syncStatus.id='syncStatus';syncStatus.className='help';syncStatus.textContent='☁️ Online-Wörter werden geladen …';document.querySelector('.editor-toggle').append(syncStatus);
+async function openTeacher(){
+ try{const state=await api('status');setupRequired=!state.configured;teacherUnlocked=!!state.authenticated;
+ access.hidden=teacherUnlocked;editor.hidden=!teacherUnlocked;
+ $('setupFields').hidden=!setupRequired;$('accessHint').textContent=setupRequired?'Ersteinrichtung: Einrichtungsschlüssel und deinen neuen PIN eingeben.':'Bitte deinen Administrator-PIN eingeben.';
+ $('accessButton').textContent=setupRequired?'PIN jetzt festlegen':'Anmelden';
+ if(teacherUnlocked){renderCustomList();editor.scrollIntoView({behavior:'smooth',block:'start'})}else access.scrollIntoView({behavior:'smooth',block:'start'});
+ }catch(e){access.hidden=false;$('accessMessage').textContent='Server nicht erreichbar: '+e.message}
+}
+$('toggleEditor').onclick=()=>{if(!editor.hidden||!access.hidden){editor.hidden=true;access.hidden=true;$('toggleEditor').setAttribute('aria-expanded','false');return}$('toggleEditor').setAttribute('aria-expanded','true');openTeacher()};
+$('accessButton').onclick=async()=>{const pin=$('teacherPin').value;try{if(!/^[0-9]{6,12}$/.test(pin))throw Error('Bitte 6 bis 12 Ziffern eingeben.');await api(setupRequired?'setup':'login','POST',setupRequired?{pin,setupKey:$('setupKey').value}:{pin});$('teacherPin').value='';$('setupKey').value='';$('accessMessage').textContent='';await openTeacher()}catch(e){$('accessMessage').textContent=e.message}};
+$('logoutTeacher').onclick=async()=>{try{await api('logout','POST')}catch{}teacherUnlocked=false;editor.hidden=true;access.hidden=true;$('toggleEditor').setAttribute('aria-expanded','false')};
+function updateEditorTopics(){$('editTopic').replaceChildren();categories.forEach(c=>{const o=document.createElement('option');o.value=c[0];o.textContent=c[2];$('editTopic').append(o)});$('editTopic').value=topic}
+function showEditorMessage(message){$('editorMessage').textContent=message}
+function refreshAfterEdit(){refreshLessons();wordIndex=0;showCategories();word();newQuestion();renderCustomList()}
+function renderCustomList(){$('customList').replaceChildren();if(!customWords.length){const p=document.createElement('p');p.textContent='Noch keine eigenen Wörter vorhanden.';$('customList').append(p);return}customWords.forEach((w)=>{const row=document.createElement('div');row.className='manage-item';const title=document.createElement('span');title.textContent=(w.emoji||'📖')+' '+w.german+' · '+categories.find(c=>c[0]===w.topic)[2];if(w.image){const img=document.createElement('img');img.src=w.image;img.alt='';row.append(img)}row.append(title);const del=document.createElement('button');del.className='btn secondary-danger';del.textContent='Löschen';del.type='button';del.setAttribute('aria-label',w.german+' löschen');del.onclick=async()=>{if(!confirm('„'+w.german+'“ wirklich löschen?'))return;try{await api('delete','POST',{id:w.id});await loadSharedWords();showEditorMessage('Wort auf allen Geräten gelöscht.')}catch(e){showEditorMessage(e.message)}};row.append(del);$('customList').append(row)})}
+function imageData(file){return new Promise((resolve,reject)=>{if(!file){resolve('');return}if(!['image/png','image/jpeg','image/webp'].includes(file.type)){reject(Error('Bitte ein JPG-, PNG- oder WebP-Bild wählen.'));return}if(file.size>1500000){reject(Error('Das Bild ist zu groß (maximal 1,5 MB).'));return}const reader=new FileReader();reader.onload=()=>resolve(String(reader.result));reader.onerror=()=>reject(Error('Bild konnte nicht gelesen werden.'));reader.readAsDataURL(file)})}
+$('editImage').onchange=async()=>{const box=$('imagePreview');box.replaceChildren();const f=$('editImage').files[0];if(!f)return;try{const data=await imageData(f);const img=document.createElement('img');img.src=data;img.alt='Bildvorschau';box.append(img)}catch(e){showEditorMessage(e.message);$('editImage').value=''}};
+$('wordForm').onreset=()=>{setTimeout(()=>$('imagePreview').replaceChildren(),0);showEditorMessage('')};
+// Public MyMemory translation service: best-effort suggestions, not a guaranteed translation.
+// User-entered words are sent to the service; never send images or personal information.
+const TRANSLATION_URL='https://api.mymemory.translated.net/get';
+let translationBusy=false;
+async function translateOne(text,target){
+ const url=TRANSLATION_URL+'?q='+encodeURIComponent(text)+'&langpair=de%7C'+target;
+ const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),9000);
+ try{const res=await fetch(url,{signal:controller.signal});if(!res.ok)throw Error('HTTP '+res.status);
+ const data=await res.json();const candidate=String(data?.responseData?.translatedText||'').trim();
+ if(Number(data?.responseStatus)!==200||!candidate||candidate.toLowerCase()===text.toLowerCase())throw Error('Keine Übersetzung verfügbar');
+ return candidate.replace(/<[^>]*>/g,'');
+ }finally{clearTimeout(timeout)}
+}
+async function fillTranslations(force=false){
+ const text=$('editGerman').value.trim();if(!text){showEditorMessage('Bitte zuerst ein deutsches Wort eingeben.');return false}
+ if(translationBusy)return false;
+ const fields=[['tr','editTr'],['uk','editUk'],['ar','editAr']].filter(([,id])=>force||!$(id).value.trim());
+ if(!fields.length)return true;
+ translationBusy=true;$('autoTranslate').disabled=true;showEditorMessage('🌍 Übersetzungen werden gesucht …');
+ const results=await Promise.allSettled(fields.map(async([code,id])=>({id,value:await translateOne(text,code)})));
+ let ok=0;let failed=0;
+ results.forEach((result,i)=>{if(result.status==='fulfilled'){const {id,value}=result.value;if(force||!$(id).value.trim())$(id).value=value;ok++}else failed++});
+ translationBusy=false;$('autoTranslate').disabled=false;
+ showEditorMessage(failed?'⚠️ '+ok+' Übersetzung(en) eingefügt; '+failed+' nicht verfügbar. Bitte fehlende Übersetzungen selbst ergänzen.':'✓ Übersetzungen eingefügt. Bitte vor dem Speichern prüfen.');
+ return failed===0;
+}
+$('autoTranslate').onclick=()=>fillTranslations(false);
+$('editGerman').addEventListener('change',()=>{if($('autoTranslateEnabled').checked&&$('editGerman').value.trim())fillTranslations(false)});
+$('wordForm').onsubmit=async e=>{e.preventDefault();const german=$('editGerman').value.trim();if(!german)return;if(customWords.length>=300){showEditorMessage('Maximal 300 eigene Wörter möglich.');return}if($('autoTranslateEnabled').checked)await fillTranslations(false);try{const image=await imageData($('editImage').files[0]);const entry={topic:$('editTopic').value,german,tr:$('editTr').value.trim(),uk:$('editUk').value.trim(),ar:$('editAr').value.trim(),emoji:$('editEmoji').value.trim(),sentence:$('editSentence').value.trim(),image};await api('add','POST',entry);await loadSharedWords();$('wordForm').reset();showEditorMessage('✓ „'+german+'“ ist jetzt auf allen Geräten verfügbar!')}catch(err){showEditorMessage(err.message)}};
+$('exportWords').onclick=()=>{const blob=new Blob([JSON.stringify({version:1,words:customWords},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='deutsch-entdecker-meine-woerter.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);showEditorMessage('Export erstellt.')};
+$('importWords').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>12000000)throw Error('Die Datei ist zu groß.');const data=JSON.parse(await file.text());if(!data||!Array.isArray(data.words)||data.words.length>300||!data.words.every(isValidCustom))throw Error('Die Datei enthält keine gültige Wörtersammlung.');if(!confirm(data.words.length+' Wörter in die gemeinsame Online-Sammlung importieren? Bereits vorhandene Wörter bleiben erhalten.'))return;const result=await api('import','POST',{words:data.words});await loadSharedWords();showEditorMessage('✓ '+result.imported+' Wörter online importiert.')}catch(err){showEditorMessage(err.message)}finally{e.target.value=''}};
+updateEditorTopics();renderCustomList();loadSharedWords();document.addEventListener('visibilitychange',()=>{if(!document.hidden)loadSharedWords()});setInterval(()=>{if(!document.hidden)loadSharedWords()},60000);
+
+</script></body></html>
